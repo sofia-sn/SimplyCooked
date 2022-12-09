@@ -4,9 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+    <link rel="stylesheet" href="style.css">
+    <title>Contact</title>
+
+    <div class="container">
+        <form action="action_page.php">
+      
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+          <label for="email">E-mail</label>
+          <input type="text" id="email" name="E-mail" placeholder="Your email..">
+         
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="belgium">Belgium</option>
+            <option value="costa rica">Costa Rica</option>
+            <option value="denmark">Denmark</option>
+            <option value="england">England</option>
+            <option value="finland">Finland</option>
+            <option value="germany">Germany</option>
+            <option value="honduras">Honduras</option>
+            <option value="india">India</option>
+            <option value="japan">Japan</option>
+            <option value="kosovo">Kosovo</option>
+            <option value="luxembourg">Luxembourg</option>
+            <option value="macedonia">Macedonia</option>
+            <option value="new zeland">New Zeland</option>
+            <option value="oman">Oman</option>
+            <option value="portugal">Portugal</option>
+            <option value="qatar">Qatar</option>
+            <option value="russia">Russia</option>
+            <option value="spain">Spain</option>
+            <option value="taiwan">Taiwan</option>
+            <option value="usa">USA</option>
+            <option value="ukrain">Ukrain</option>
+            <option value="venezuela">Venezuela</option>
+            <option value="yemen">Yemen</option>
+            <option value="zimbabwe">Zimbabwe</option>
+            <option value="other">Other</option>
+
+          </select>
+          <label for="recipe">Recipe</label>
+          <textarea id="subject" name="subject" placeholder="Share your favourite recipe with us.." style="height:200px"></textarea>
+         
+          <label for="comments">Comments</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+          <label for="feedback">Feedback</label>
+          <textarea id="subject" name="subject" placeholder="Write feedback on website. Help us improve!" style="height:200px"></textarea>
+
+      
+          <input type="submit" value="Submit">
+      
+        </form>
+      </div>
