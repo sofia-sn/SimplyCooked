@@ -1,0 +1,10 @@
+.main_Image {
+    margin: 50px;
+    height: 100%;
+}
+
+.contentDishes {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+}
