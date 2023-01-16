@@ -4,13 +4,11 @@
     background-color: #B77427;
   }
 
-   .logo-image img{
-     width: 75px;
-     height: 75px;
-     border-radius: 50%;
-     overflow: hidden;
-     margin-top: -6px;
-     background-color: #C5E1E4;
+  .logo-image {
+    background-color: transparent;
+    float: left;
+    overflow: hidden;
+    }
 
   .topnav a {
     float: left;
