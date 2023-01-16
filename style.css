@@ -8,6 +8,7 @@
     background-color: transparent;
     float: left;
     overflow: hidden;
+    border-radius: 50%;
     }
 
   .topnav a {
