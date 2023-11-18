@@ -7,6 +7,31 @@
     <link rel="stylesheet" href="style.css">
     <title>SimplyCooked</title>
 
+    <style>
+         /* add to CSS style file */
+
+        /* CSS for the hover effect */
+        .column .hover-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.5s; /* Smooth transition effect */
+        }
+    
+        .column:hover .hover-image {
+            transform: scale(1.2); /* Increase size on hover */
+        }
+    </style>
+
+    <script>
+        // JavaScript for changing images on hover
+        function toggleImage(element, images) {
+        let currentImageIndex = images.indexOf(element.src);
+        currentImageIndex = (currentImageIndex + 1) % images.length; // Toggle to the next image
+        element.src = images[currentImageIndex];
+    }
+    </script>
+
 </head>
 <body>
     <b class="logo-image"><img src="logoresize.jpg" alt="Avatar"> </b>
@@ -33,37 +58,26 @@
         <div class="column">
           <h4 style = " color: #E7BB2C;"><center>Balkan</center></h4>
           <p>Discover Balkan cuisine with easy and succulent recipes!</p>
-          <a href="Balkanrecipe.html"><img src="https://www.rakijagrill.com/wp-content/uploads/2019/11/shutterstock_1502599004-1.jpg" style="width:100%"></a>
+          <a href="Balkanrecipe.html">
+            <img src="https://www.rakijagrill.com/wp-content/uploads/2019/11/shutterstock_1502599004-1.jpg" 
+            class ="hover-image" onmouseover="toggleImage(this, ['https://www.rakijagrill.com/wp-content/uploads/2019/11/shutterstock_1502599004-1.jpg', 'https://chasingthedonkey.b-cdn.net/wp-content/uploads/2021/10/Turkish-Sausage-sucuk-and-egg_Depositphotos_55742119_S-900x600.jpeg','https://chasingthedonkey.b-cdn.net/wp-content/uploads/2019/05/Fis-paprikas-14-900x695.jpg'])">
+            </a>
         </div>
         <div class="column">
             <h4 style = " color: #E7BB2C;"><center>Indian</center></h4>
             <p>Embark on a delicious journey with our savory Indian recipes! </p>
-            <a href="Indianrecipe.html"><img src="https://www.thecoldwire.com/wp-content/uploads/2020/11/selection-of-indian-food.jpg" style="width:100%"></a>
+            <a href="Indianrecipe.html">
+                <img src="https://www.thecoldwire.com/wp-content/uploads/2020/11/selection-of-indian-food.jpg" 
+                class ="hover-image" onmouseover="toggleImage(this, ['https://www.thecoldwire.com/wp-content/uploads/2020/11/selection-of-indian-food.jpg','https://www.tasteofhome.com/wp-content/uploads/2021/01/Curry-769792415.jpg?fit=700%2C700?fit=335,335','https://www.tasteofhome.com/wp-content/uploads/2020/03/Slow-Cooker-Butter-Chicken_EXPS_FT20_192992_F_0204_1-4.jpg?fit=696%2C696?fit=335,335'])">
+            </a>
         </div>
         <div class="column">
-            <h4 style = " color: #E7BB2C;"><center>Latin</center></h4>
-            <p>Try our Latin culinary masterpieces for meals you won’t soon forget!</p>
-            <a href="Latinrecipe.html"><img src="https://images.vidavegasmagazine.com/wp-media-folder-vida-las-vegas-magazine/wp-content/uploads/2022/10/mexican-festive-food-for-independence-day-independ-2022-09-07-21-08-06-utc.jpg" style="width:100%"></a>
-        </div>
-        
-    </div>
-
-    
-    <div class="row">
-        <div class="column">
-            <h4 style = " color: #E7BB2C;"><center>North African</center></h4>
-            <p>Take your tastebuds on a tour accross north africa with our aromatic recipes!</p>
-            <a href="Northafricanrecipe.html"><img id="N.A." src="https://cdn0.centralappstatic.com/api/v1/media/original/place-9613-sqosvkqi2djb87hnnjwm.jpeg" style="width:100%"></a>
-        </div>
-        <div class="column">
-            <h4 style = " color: #E7BB2C;"><center>Mexican</center></h4>
-            <p>Add some spice to your life by trying out the best Mexican dishes! </p>
-            <a href="Mexicanrecipe.html"><img src="https://www.thecoldwire.com/wp-content/uploads/2020/11/selection-of-indian-food.jpg" style="width:100%"></a>
-        </div>
-        <div class="column">
-            <h4 style = " color: #E7BB2C;"><center>Korean</center></h4>
-            <p>Try our Latin culinary masterpieces for meals you won’t soon forget!</p>
-            <a href="Koreanrecipe.html"><img src="https://images.vidavegasmagazine.com/wp-media-folder-vida-las-vegas-magazine/wp-content/uploads/2022/10/mexican-festive-food-for-independence-day-independ-2022-09-07-21-08-06-utc.jpg" style="width:100%"></a>
+            <h4 style = " color: #E7BB2C;"><center>Australian</center></h4>
+            <p>Directly from Australia, prepare your favourite dishes like never before!!</p>
+            <a href="Australianrecipe.html">
+                <img src="https://th.bing.com/th/id/R.3cb65c39d2906661457e3c8eeeabbd67?rik=k1%2bBS5F1mZWwqw&pid=ImgRaw&r=0" 
+                class ="hover-image" onmouseover="toggleImage(this, ['https://th.bing.com/th/id/R.3cb65c39d2906661457e3c8eeeabbd67?rik=k1%2bBS5F1mZWwqw&pid=ImgRaw&r=0','https://travelfoodatlas.com/wp-content/uploads/2022/05/lamingtons-768x512.jpg.webp','https://travelfoodatlas.com/wp-content/uploads/2023/04/Witchetty-Grub.jpg.webp','https://travelfoodatlas.com/wp-content/uploads/2021/12/seared-kangaroo-meat-768x532.jpg.webp'])">
+            </a>
         </div>
         
     </div>
@@ -71,19 +85,62 @@
     
     <div class="row">
         <div class="column">
-          <h4 style = " color: #E7BB2C;"><center>Japanese</center></h4>
-          <p>Discover Balkan cuisine with easy and succulent recipes!</p>
-          <a href="Japaneserecipe.html"><img src="https://www.rakijagrill.com/wp-content/uploads/2019/11/shutterstock_1502599004-1.jpg" style="width:100%"></a>
+            <h4 style="color: #E7BB2C;"><center>North American</center></h4>
+            <p>Take your tastebuds on a tour across North America with our aromatic recipes!</p>
+            <!-- Use the onmouseover event to trigger image changes -->
+            <a href="Northamericanrecipe.html">
+                    <img src='https://www.specialtyfood.com/media/filer_public/ed/33/ed330342-c726-467a-9112-d54d680b6175/simple_cafe-65.jpg'
+                        class ="hover-image" onmouseover="toggleImage(this, ['https://www.specialtyfood.com/media/filer_public/ed/33/ed330342-c726-467a-9112-d54d680b6175/simple_cafe-65.jpg', 'https://cdn.theculturetrip.com/images/56-3930840-14402702559f9f9a671736435da6971b1275ea0fe2.jpg?s=350x263', 'https://cdn.theculturetrip.com/images/56-3930834-1440270242e952733f36a74d0486058ce5bbfbc347.jpg?s=350x234'])">
+            </a>
+                          
+        </div>
+
+        <div class="column">
+            <h4 style="color: #E7BB2C;"><center>Mexican</center></h4>
+            <p>Add some spice to your life by trying out the best Mexican dishes!</p>
+            <a href="Mexicanrecipe.html">
+                <img src="https://images.vidavegasmagazine.com/wp-media-folder-vida-las-vegas-magazine/wp-content/uploads/2022/10/mexican-festive-food-for-independence-day-independ-2022-09-07-21-08-06-utc.jpg" 
+                     class ="hover-image" onmouseover="toggleImage(this, ['https://th.bing.com/th/id/R.3d6308ca6073c0af0d6962192789078e?rik=9eT7COy5Oojz0A&pid=ImgRaw&r=0','https://travelfoodatlas.com/wp-content/uploads/2020/08/Tacos-Al-Pastor.jpg.webp', 'https://travelfoodatlas.com/wp-content/uploads/2022/04/beef-burrito-768x532.jpg.webp'])">
+            </a>
+        </div>
+    
+
+
+        <div class="column">
+            <h4 style="color: #E7BB2C;"><center>Japanese</center></h4>
+            <p>Japanese dishes, find international culinary inspiration!</p>
+            <a href="Japaneserecipe.html">
+                <img src="https://img.jakpost.net/c/2017/02/28/2017_02_28_22453_1488267265._large.jpg" 
+                class ="hover-image" onmouseover="toggleImage(this, ['https://img.jakpost.net/c/2017/02/28/2017_02_28_22453_1488267265._large.jpg','https://lp-cms-production.imgix.net/2020-11/Miso_soup_S.jpg?auto=format&fit=crop&sharp=10&vib=20&ixlib=react-8.6.4&w=850&q=35&dpr=3','https://4.bp.blogspot.com/-Hjd2D32yiyI/VpF8TVvld-I/AAAAAAAAAN4/cq3vIUUWogA/s1600/sushi_0.jpg'])">
+            </a>
+        </div>
+    </div>
+    
+
+    
+    <div class="row">
+        <div class="column">
+          <h4 style = " color: #E7BB2C;"><center>Korean</center></h4>
+          <p>Immerse yourself in an unforgettable culinary experience by experiencing our Korean dishes!</p>
+          <a href="Koreanrecipe.html">
+            <img src="https://s.hdnux.com/photos/13/10/16/2917272/9/rawImage.jpg" 
+            class ="hover-image" onmouseover="toggleImage(this, ['https://s.hdnux.com/photos/13/10/16/2917272/9/rawImage.jpg','https://www.beyondkimchee.com/wp-content/uploads/2021/01/thumb.jpg','https://www.beyondkimchee.com/wp-content/uploads/2023/10/easy-japchae-thumbnail.jpg'])">
+            </a>
         </div>
         <div class="column">
             <h4 style = " color: #E7BB2C;"><center>American</center></h4>
             <p>Embark on a delicious journey with our savory Indian recipes! </p>
-            <a href="Americanrecipe.html"><img src="https://www.thecoldwire.com/wp-content/uploads/2020/11/selection-of-indian-food.jpg" style="width:100%"></a>
+            <a href="Americanrecipe.html"><img src="https://media.timeout.com/images/103708865/image.jpg" 
+                class ="hover-image" onmouseover="toggleImage(this, ['https://media.timeout.com/images/103708865/image.jpg','https://preview.redd.it/5nqcsrbcrh011.jpg?auto=webp&s=0fdaff6bffe06957cb9477555df6a19f3f09956b','https://bing.com/th?id=OSK.598c5b2b7b65082004e599cc520830a2'])">
+            </a>
         </div>
         <div class="column">
             <h4 style = " color: #E7BB2C;"><center>Chinese</center></h4>
             <p>Try our Latin culinary masterpieces for meals you won’t soon forget!</p>
-            <a href="Chineserecipe.html"><img src="https://images.vidavegasmagazine.com/wp-media-folder-vida-las-vegas-magazine/wp-content/uploads/2022/10/mexican-festive-food-for-independence-day-independ-2022-09-07-21-08-06-utc.jpg" style="width:100%"></a>
+            <a href="Chineserecipe.html">
+                <img src="https://th.bing.com/th/id/R.02917fae216efac32405df02100bce70?rik=WK7jMIFXJNzyVA&pid=ImgRaw&r=0" 
+                class ="hover-image" onmouseover="toggleImage(this, ['https://th.bing.com/th/id/R.02917fae216efac32405df02100bce70?rik=WK7jMIFXJNzyVA&pid=ImgRaw&r=0','https://images.chinahighlights.com/allpicture/2019/01/9b7159f6d89449d997eaa5ab_cut_750x400_39.webp','https://images.chinahighlights.com/allpicture/2014/09/2b424254939d4d51adda30fe_cut_750x400_39.webp'])">
+            </a>
         </div>
         
     </div>
@@ -93,17 +150,38 @@
         <div class="column">
           <h4 style = " color: #E7BB2C;"><center>German</center></h4>
           <p>Discover Balkan cuisine with easy and succulent recipes!</p>
-          <a href="Germanrecipe.html"><img src="https://www.rakijagrill.com/wp-content/uploads/2019/11/shutterstock_1502599004-1.jpg" style="width:100%"></a>
+          <a href="Germanrecipe.html">
+            <img src="https://th.bing.com/th/id/R.0c3c9f5157b8d17d3d45738daff048c6?rik=omgi5A2u%2blfbkQ&pid=ImgRaw&r=0" 
+            class ="hover-image" onmouseover="toggleImage(this, ['https://th.bing.com/th/id/R.0c3c9f5157b8d17d3d45738daff048c6?rik=omgi5A2u%2blfbkQ&pid=ImgRaw&r=0',
+            'https://www.swedishnomad.com/wp-content/images/2018/09/Spatzle.jpg.webp',
+            'https://www.swedishnomad.com/wp-content/images/2019/07/Currywurst.jpg.webp',
+            'https://www.swedishnomad.com/wp-content/images/2018/09/Maultaschen.jpg.webp',
+            'https://www.swedishnomad.com/wp-content/images/2018/09/Flammkuchen.jpg.webp',
+            'https://lh3.googleusercontent.com/WePLa6gulCpK4DZzCUmxFL9dscR7VCnuf4LMfgugFH-uh65q9QGvMKXAlPbw1mA0S5Yrc1SeqRrvbEVvlRKRcpwlOuVN_0PwNieBaE0=w1200-l75',
+            'https://www.einfachbacken.de/sites/einfachbacken.de/files/styles/full_width_tablet_4_3/public/2019-01/schwarzwaelder-kirsch-torte.jpg?h=e0ec072e&itok=SfBt71Zu',
+            'https://cookiesandcups.com/wp-content/uploads/2020/07/applestrudel-5-1000x1000.jpg'])">
+            </a>
         </div>
         <div class="column">
-            <h4 style = " color: #E7BB2C;"><center>Indonesian</center></h4>
+            <h4 style = " color: #E7BB2C;"><center>Thai</center></h4>
             <p>Embark on a delicious journey with our savory Indian recipes! </p>
-            <a href="Indonesianrecipe.html"><img src="https://www.thecoldwire.com/wp-content/uploads/2020/11/selection-of-indian-food.jpg" style="width:100%"></a>
+            <a href="Thairecipe.html">
+                <img src="https://th.bing.com/th/id/R.9c2651b84d742da43fb7aab53217b3ed?rik=hqsk9h4fUecY%2bQ&pid=ImgRaw&r=0" 
+                class ="hover-image" onmouseover="toggleImage(this, ['https://th.bing.com/th/id/R.9c2651b84d742da43fb7aab53217b3ed?rik=hqsk9h4fUecY%2bQ&pid=ImgRaw&r=0',
+                'https://data.asiahighlights.com/image/travel-guide/thailand/thai-food/tom-yum-goong.webp','https://data.asiahighlights.com/image/travel-guide/thailand/thai-food/thai-green-curry-with-chicken.webp'])">
+            </a>
         </div>
         <div class="column">
             <h4 style = " color: #E7BB2C;"><center>Italian</center></h4>
             <p>Try our Latin culinary masterpieces for meals you won’t soon forget!</p>
-            <a href="Italianrecipe.html"><img src="https://images.vidavegasmagazine.com/wp-media-folder-vida-las-vegas-magazine/wp-content/uploads/2022/10/mexican-festive-food-for-independence-day-independ-2022-09-07-21-08-06-utc.jpg" style="width:100%"></a>
+            <a href="Italianrecipe.html">
+                <img src="https://www.mashed.com/img/gallery/italian-chain-restaurants-ranked-from-worst-to-best/l-intro-1618597744.jpg" 
+                class ="hover-image" onmouseover="toggleImage(this, ['https://www.mashed.com/img/gallery/italian-chain-restaurants-ranked-from-worst-to-best/l-intro-1618597744.jpg',
+            'https://www.tasteatlas.com/images/dishes/966281fa045045cdac9d3a1830b08b8f.jpg?mw=1300',
+            'https://cdn.tasteatlas.com//images/dishes/d8ae78171ba445c98ec71ff782a9b1d7.jpg?w=905&h=510',
+            'https://cdn.tasteatlas.com//images/dishes/d8cf5af177274c3d9760ed59e92d3ec0.jpg?w=905&h=510',
+            ])">
+            </a>
         </div>
         
     </div>
@@ -112,18 +190,41 @@
     <div class="row">
         <div class="column">
           <h4 style = " color: #E7BB2C;"><center>Spanish</center></h4>
-          <p>Discover Balkan cuisine with easy and succulent recipes!</p>
-          <a href="Spanishrecipe.html"><img src="https://www.rakijagrill.com/wp-content/uploads/2019/11/shutterstock_1502599004-1.jpg" style="width:100%"></a>
+          <p>Enjoy a fiesta of fantastic flavours with our incredible collection of Spanish recipes!</p>
+          <a href="Spanishrecipe.html">
+            <img src="https://www.expatica.com/app/uploads/sites/2/2014/05/spanish-cuisine-1920x1080.jpg" 
+            class ="hover-image" onmouseover="toggleImage(this, ['https://www.expatica.com/app/uploads/sites/2/2014/05/spanish-cuisine-1920x1080.jpg',
+            'https://assets.afcdn.com/recipe/20200729/112914_w1944h1242c1cx1042cy719.jpg',
+            'https://th.bing.com/th/id/OIP.UbwicuZykGP3GJF9djstdAHaFx?pid=ImgDet&rs=1'
+            ])">
+            </a>
         </div>
         <div class="column">
             <h4 style = " color: #E7BB2C;"><center>French</center></h4>
             <p>Embark on a delicious journey with our savory Indian recipes! </p>
-            <a href="Frenchrecipe.html"><img src="https://www.thecoldwire.com/wp-content/uploads/2020/11/selection-of-indian-food.jpg" style="width:100%"></a>
+            <a href="Frenchrecipe.html">
+                <img src="https://www.adotrip.com/public/images/events/master_images/5e2ea2db3066f-French_food_festival_Sight_Seeing_Tour.jpg" 
+                class ="hover-image" onmouseover="toggleImage(this, ['https://www.adotrip.com/public/images/events/master_images/5e2ea2db3066f-French_food_festival_Sight_Seeing_Tour.jpg',
+                'https://th.bing.com/th/id/OIP.SjLClMC-p0XNv3kwWbf5jAHaHa?pid=ImgDet&rs=1',
+                'https://www.french-waterways.com/waterpress/wp-content/imagez/5-1000x563.webp',
+                'https://www.french-waterways.com/waterpress/wp-content/imagez/6-1000x563.webp',
+                'https://www.french-waterways.com/waterpress/wp-content/imagez/15-1000x563.webp',
+                'https://www.french-waterways.com/waterpress/wp-content/imagez/18-1000x563.webp'
+            ])">
+            </a>
         </div>
+
         <div class="column">
-            <h4 style = " color: #E7BB2C;"><center>Australian</center></h4>
-            <p>Try our Latin culinary masterpieces for meals you won’t soon forget!</p>
-            <a href="Australianrecipe.html"><img src="https://images.vidavegasmagazine.com/wp-media-folder-vida-las-vegas-magazine/wp-content/uploads/2022/10/mexican-festive-food-for-independence-day-independ-2022-09-07-21-08-06-utc.jpg" style="width:100%"></a>
+            <h4 style="color: #E7BB2C;"><center>Greek</center></h4>
+            <p>Try our Greek culinary masterpieces for meals you won’t soon forget!</p>
+             <a href="Greekrecipe.html">
+                <img src="https://th.bing.com/th/id/R.2bdea2475ce3646f480d4e6bc7b77f72?rik=Kl71W8S64u3PFg&riu=http%3a%2f%2ffravel.co%2fwp-content%2fuploads%2f2021%2f06%2ftraditional-greek-food.jpeg&ehk=ABH2YzoU7hph0KZsFD8DoOiE8HQKENrLi8Tf5KtIBlI%3d&risl=&pid=ImgRaw&r=0"
+                     class="hover-image" onmouseover="toggleImage(this, [
+                        'https://th.bing.com/th/id/R.2bdea2475ce3646f480d4e6bc7b77f72?rik=Kl71W8S64u3PFg&riu=http%3a%2f%2ffravel.co%2fwp-content%2fuploads%2f2021%2f06%2ftraditional-greek-food.jpeg&ehk=ABH2YzoU7hph0KZsFD8DoOiE8HQKENrLi8Tf5KtIBlI%3d&risl=&pid=ImgRaw&r=0',
+                        'https://www.chefspencil.com/wp-content/uploads/Souvlakia-960x960.jpeg.webp',
+                        'https://www.chefspencil.com/wp-content/uploads/Moussaka.jpeg.webp'
+                     ])">
+            </a>
         </div>
         
     </div>
